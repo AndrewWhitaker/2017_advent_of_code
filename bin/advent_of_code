@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "advent_of_code"
+
+class Bootstrap
+  def initialize(day, part, args)
+    @day = day
+    @part = part
+		@args = args
+  end
+
+  def klass
+    Module.const_get("AdventOfCode::Day#{@day}::Part#{@part}")
+  end
+
+  def run
+    klass.new(*@args).run
+  end
+end
+
+day, part, file_name = ARGV
+
+file = File.read(file_name)
+
+Bootstrap.new(day, part, file).run

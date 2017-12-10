@@ -1,0 +1,5 @@
+require "advent_of_code/day_1/part_1"
+require "advent_of_code/day_1/part_2"
+require "advent_of_code/day_2/part_1"
+require "advent_of_code/day_2/part_2"
+require "advent_of_code/day_3/part_1"
